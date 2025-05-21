@@ -6,8 +6,11 @@ import okhttp3.MediaType
 import retrofit2.Retrofit
 
 object RssFactory {
+
+    private const val BASE_URL = "https://www.theguardian.com"
+
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://www.theguardian.com")
+        .baseUrl(BASE_URL)
         .addConverterFactory(
             XML.asConverterFactory(
                 MediaType.get("application/xml; charset=UTF8")

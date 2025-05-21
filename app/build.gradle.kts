@@ -90,6 +90,7 @@ dependencies {
     // navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.compose)
 
     // coroutine
     implementation(libs.kotlinx.coroutines.core)
@@ -97,4 +98,14 @@ dependencies {
 
     // recycler
     implementation(libs.androidx.recyclerview)
+
+    //viewModelScope
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    //glider
+    implementation(libs.glide)
+    implementation(libs.landscapist.glide)
+
+    //viewModel compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 }

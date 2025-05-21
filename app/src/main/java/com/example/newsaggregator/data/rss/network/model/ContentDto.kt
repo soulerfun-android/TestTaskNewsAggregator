@@ -1,4 +1,4 @@
-package com.example.newsaggregator.data.rss.dto
+package com.example.newsaggregator.data.rss.network.model
 
 import kotlinx.serialization.Serializable
 import nl.adaptivity.xmlutil.serialization.XmlSerialName

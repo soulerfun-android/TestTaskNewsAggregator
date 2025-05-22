@@ -1,4 +1,4 @@
-package com.example.newsaggregator.domain
+package com.example.newsaggregator.domain.repository
 
 import com.example.newsaggregator.domain.entity.NewsItem
 

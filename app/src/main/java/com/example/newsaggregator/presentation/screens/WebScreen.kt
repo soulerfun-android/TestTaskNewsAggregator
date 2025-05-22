@@ -1,4 +1,4 @@
-package com.example.newsaggregator.ui.composable_screens
+package com.example.newsaggregator.presentation.screens
 
 import android.annotation.SuppressLint
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.example.newsaggregator.navigation
+package com.example.newsaggregator.presentation.navigation
 
 import android.net.Uri
 import com.example.newsaggregator.domain.entity.NewsItem

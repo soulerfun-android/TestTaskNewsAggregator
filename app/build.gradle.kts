@@ -6,7 +6,6 @@ plugins {
     id("kotlin-kapt")
     id("androidx.room")
     alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.androidx.navigation.safeargs)
 }
 
@@ -83,10 +82,6 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
-    // hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-
     // navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
@@ -108,4 +103,7 @@ dependencies {
 
     //viewModel compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    //activity
+    implementation (libs.androidx.activity.ktx)
 }

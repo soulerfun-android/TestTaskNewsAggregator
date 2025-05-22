@@ -1,4 +1,4 @@
-package com.example.newsaggregator.navigation
+package com.example.newsaggregator.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

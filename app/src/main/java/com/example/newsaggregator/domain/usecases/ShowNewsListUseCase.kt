@@ -1,6 +1,6 @@
 package com.example.newsaggregator.domain.usecases
 
-import com.example.newsaggregator.domain.Repository
+import com.example.newsaggregator.domain.repository.Repository
 import com.example.newsaggregator.domain.entity.NewsItem
 
 class ShowNewsListUseCase(

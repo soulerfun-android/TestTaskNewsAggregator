@@ -1,4 +1,4 @@
-package com.example.newsaggregator.ui.composable_screens
+package com.example.newsaggregator.presentation.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,21 +12,17 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.newsaggregator.domain.entity.NewsItem
-import com.example.newsaggregator.ui.ViewModelFactory
-import com.example.newsaggregator.ui.mainscreen.MainViewModel
-import com.example.newsaggregator.ui.screens.NewsListScreenState
+import com.example.newsaggregator.presentation.NewsListScreenState
+import com.example.newsaggregator.presentation.mainscreen.MainViewModel
 import com.skydoves.landscapist.glide.GlideImage
 
 @Composable
 fun NewsScreen(
+    viewModel: MainViewModel,
     paddingValues: PaddingValues,
     onNewsClickListener: (newsItem: NewsItem) -> Unit
 ) {
-    val viewModel: MainViewModel = viewModel(
-        factory = ViewModelFactory()
-    )
 
     val screenState = viewModel.newsItemsState.collectAsState(NewsListScreenState.Initial)
 

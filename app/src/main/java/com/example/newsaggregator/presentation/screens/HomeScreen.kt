@@ -1,21 +1,22 @@
-package com.example.newsaggregator.ui.composable_screens
+package com.example.newsaggregator.presentation.screens
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
-import com.example.newsaggregator.navigation.AppNavGraph
-import com.example.newsaggregator.navigation.Screen
-import com.example.newsaggregator.navigation.rememberNavigationState
+import com.example.newsaggregator.presentation.mainscreen.MainViewModel
+import com.example.newsaggregator.presentation.navigation.AppNavGraph
+import com.example.newsaggregator.presentation.navigation.rememberNavigationState
 
 @Composable
 fun HomeScreen(
     paddingValues: PaddingValues,
+    viewModel: MainViewModel
 ) {
     val navigationState = rememberNavigationState()
 
     AppNavGraph(
         navHostController = navigationState.navHostController,
         newsListScreenContent = {
-            NewsScreen(paddingValues) {
+            NewsScreen(viewModel = viewModel, paddingValues = paddingValues) {
                 navigationState.navigateTo(it)
             }
         },

@@ -1,4 +1,4 @@
-package com.example.newsaggregator.ui.screens
+package com.example.newsaggregator.presentation
 
 import com.example.newsaggregator.domain.entity.NewsItem
 

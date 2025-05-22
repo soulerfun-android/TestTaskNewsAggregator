@@ -1,4 +1,4 @@
-package com.example.newsaggregator.ui.composable_screens
+package com.example.newsaggregator.presentation.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

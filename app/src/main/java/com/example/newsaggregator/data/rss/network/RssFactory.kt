@@ -1,9 +1,14 @@
 package com.example.newsaggregator.data.rss.network
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import nl.adaptivity.xmlutil.serialization.XML
 import okhttp3.MediaType
 import retrofit2.Retrofit
+
 
 object RssFactory {
 
@@ -18,4 +23,6 @@ object RssFactory {
         ).build()
 
     val rssFeedService = retrofit.create(RssFeedService::class.java)
+
+
 }

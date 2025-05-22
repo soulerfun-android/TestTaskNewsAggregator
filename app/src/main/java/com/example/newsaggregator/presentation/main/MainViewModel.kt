@@ -17,13 +17,17 @@ class MainViewModel @Inject constructor(
     val newsItemsState = _newsItemsState.asStateFlow()
 
     init {
-        viewModelScope.launch {
-            getNewsList()
-        }
+        getNewsList()
     }
 
-    suspend fun getNewsList() {
-        val newsList = showNewsListUseCase.getNewsItemsList()
-        _newsItemsState.value = NewsListScreenState.NewsListList(newsList)
+    fun getNewsList() {
+        viewModelScope.launch {
+            try {
+                val newsList = showNewsListUseCase.getNewsItemsList()
+                _newsItemsState.value = NewsListScreenState.NewsListList(newsList)
+            } catch (e: Exception) {
+                _newsItemsState.value = NewsListScreenState.Error
+            }
+        }
     }
 }

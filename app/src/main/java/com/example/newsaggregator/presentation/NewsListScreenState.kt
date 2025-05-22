@@ -6,6 +6,8 @@ sealed class NewsListScreenState {
 
     object Initial : NewsListScreenState()
 
+    object Error : NewsListScreenState()
+
     data class NewsListList(
         val newsList: List<NewsItem>
     ) : NewsListScreenState()

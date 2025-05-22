@@ -106,4 +106,9 @@ dependencies {
 
     //activity
     implementation (libs.androidx.activity.ktx)
+
+    //dagger2
+    implementation ("com.google.dagger:dagger:2.55")
+    implementation ("com.google.dagger:dagger-android-support:2.55")
+    annotationProcessor ("com.google.dagger:dagger-compiler:2.55")
 }

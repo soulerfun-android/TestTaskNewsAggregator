@@ -1,7 +1,11 @@
 package com.example.newsaggregator.presentation
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.example.newsaggregator.di.ApplicationComponent
+import com.example.newsaggregator.di.DaggerApplicationComponent
 
-@HiltAndroidApp
-class NewsAggregationApp: Application()
+class NewsAggregationApp : Application() {
+    val component: ApplicationComponent by lazy {
+        DaggerApplicationComponent.create()
+    }
+}

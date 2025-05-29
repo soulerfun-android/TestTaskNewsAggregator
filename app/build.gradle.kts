@@ -6,7 +6,6 @@ plugins {
     id("kotlin-kapt")
     id("androidx.room")
     alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.androidx.navigation.safeargs)
 }
 
@@ -83,13 +82,10 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
-    // hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-
     // navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.compose)
 
     // coroutine
     implementation(libs.kotlinx.coroutines.core)
@@ -97,4 +93,22 @@ dependencies {
 
     // recycler
     implementation(libs.androidx.recyclerview)
+
+    //viewModelScope
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    //glider
+    implementation(libs.glide)
+    implementation(libs.landscapist.glide)
+
+    //viewModel compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    //activity
+    implementation (libs.androidx.activity.ktx)
+
+    //dagger2
+    implementation ("com.google.dagger:dagger:2.55")
+    implementation ("com.google.dagger:dagger-android-support:2.55")
+    annotationProcessor ("com.google.dagger:dagger-compiler:2.55")
 }
